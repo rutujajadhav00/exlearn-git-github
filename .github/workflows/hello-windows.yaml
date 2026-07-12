@@ -6,5 +6,8 @@ jobs:
         runs-on: windows-latest
         steps:
           - run: echo "hello from the github workflows from windows os!"
-   
+    say-bye:
+        runs-on: ubuntu-latest
+        steps:
+            - run: echo "hello from 2nd job on ubuntu os!"
 
