@@ -6,20 +6,20 @@ on:
     #  - main
 jobs:
   tf-init:
-      runs-on: ubuntu-latest
-      steps:
+    runs-on: ubuntu-latest
+    steps:
           - run: echo "tf init in progress!" 
   tf-validate:
-      runs-on: ubuntu-24.04
-      needs:
+    runs-on: ubuntu-24.04
+    needs:
         - tf-init
         
-      steps:
-           - run: echo "tf validate in progress!"
+    steps:
+        - run: echo "tf validate in progress!"
   tf-plan:
-      runs-on: ubuntu-24.04
-      needs:
-        - tf-init
-        - tf-validate
-      steps:
-         - run: echo "tf plan in progress!"
+    runs-on: ubuntu-24.04
+    needs:
+      - tf-init
+      - tf-validate
+    steps:
+        - run: echo "tf plan in progress!"
