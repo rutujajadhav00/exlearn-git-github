@@ -1,0 +1,10 @@
+name: hello from the windows github action 
+on:
+    workflow_dispatch:
+jobs:
+    say-hello:
+        runs-on: windows-latest
+        steps:
+          - run: echo "hello from the github workflows from windows os!"
+   
+
