@@ -1,0 +1,9 @@
+name: hello from the github action
+on:
+    workflow_dispatch:
+
+jobs:
+    say_hello:
+        runs on: ubuntu-24.04
+    steps:
+        -run :echo "hello from action workflows"
