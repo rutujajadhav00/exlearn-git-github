@@ -8,12 +8,11 @@ jobs:
   tf-init:
     runs-on: ubuntu-latest
     steps:
-          - run: echo "tf init in progress!" 
+        - run: echo "tf init in progress!" 
   tf-validate:
     runs-on: ubuntu-24.04
     needs:
         - tf-init
-        
     steps:
         - run: echo "tf validate in progress!"
   tf-plan:
