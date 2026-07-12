@@ -1,0 +1,18 @@
+name: multi-job github action 
+on:
+    push:
+        branches:
+            -main
+jobs:
+    tf-init:
+        runs-on: ubuntu-latest
+        steps:
+          - run: echo "tf init in progress!" 
+    tf-validate:
+        runs-on: ubuntu-24.04
+        steps:
+           - run: echo "tf validate in progress!"
+    tf-plan:
+        runs-on: ubuntu-24.04
+        steps:
+            - run: echo "tf plan in progress!"
